@@ -152,7 +152,7 @@ public class RegistrationPage {
         return this;
     }
 
-    @Step("Проверяем, что окно об успешной заполнении формы регистрации не появляется")
+    @Step("Проверяем, что окно об успешном заполнении формы регистрации не появляется")
     public void verifyResultsModalNotAppears() {
         registrationResultsModal.verifyModalAppearsNegative();
 
