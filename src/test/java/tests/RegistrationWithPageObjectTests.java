@@ -10,7 +10,7 @@ public class RegistrationWithPageObjectTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    @Tag("DemoQa")
+    @Tag("demoqa")
     void successfulRegistrationTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
