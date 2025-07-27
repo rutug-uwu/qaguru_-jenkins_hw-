@@ -9,8 +9,8 @@ import pages.RegistrationPage;
 public class RegistrationWithPageObjectTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
-    @Tag("DemoQa")
     @Test
+    @Tag("DemoQa")
     void successfulRegistrationTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
