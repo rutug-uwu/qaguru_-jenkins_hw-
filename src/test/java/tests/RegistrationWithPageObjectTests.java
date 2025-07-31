@@ -1,7 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -11,9 +10,8 @@ public class RegistrationWithPageObjectTests extends TestBase {
 
     @Test
     @Tag("demoqa")
+    @DisplayName("Позитивный: Проверка успешной регистрации при заполнении всех полей")
     void successfulRegistrationTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         registrationPage.openPage()
                 .hideAd()
                 .setFirstName("Ivan")
@@ -46,9 +44,8 @@ public class RegistrationWithPageObjectTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Позитивный: Проверка успешной регистрации при заполнении только обязательных полей")
     void successfulRegistrationMinimalTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         registrationPage.openPage()
                 .hideAd()
                 .setFirstName("Oleg")
@@ -64,9 +61,8 @@ public class RegistrationWithPageObjectTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Негативный: Проверка невозможности регистрации при незаполненнии обязательных полей")
     void negativeRegistrationTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         registrationPage.openPage()
                 .hideAd()
                 .setFirstName("Oleg")
